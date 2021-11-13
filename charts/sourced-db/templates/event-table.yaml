@@ -1,0 +1,57 @@
+apiVersion: schemas.schemahero.io/v1alpha4
+kind: Table
+metadata:
+  name: event
+spec:
+  database: {{ .Values.psql.team }}-{{ .Values.psql.name }}-postgresql
+  name: event
+  schema:
+    postgres:
+
+      primaryKey:
+      - entityType
+      - id
+      - method
+      - version
+
+      columns:
+
+      - name: entityType
+        type: text
+        constraints:
+          notNull: true
+
+      - name: id
+        type: uuid
+        constraints:
+          notNull: true
+
+      - name: method
+        type: text
+        constraints:
+          notNull: true
+
+      - name: version
+        type: integer
+        constraints:
+          notNull: true
+
+      - name: snapshotVersion
+        type: integer
+        constraints:
+          notNull: true
+
+      - name: data
+        type: jsonb
+        constraints:
+          notNull: true
+
+      - name: timestamp
+        type: bigint
+        constraints:
+          notNull: true
+
+      - name: snapshot
+        type: boolean
+        constraints:
+          notNull: true
