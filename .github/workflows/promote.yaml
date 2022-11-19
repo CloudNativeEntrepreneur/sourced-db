@@ -1,0 +1,12 @@
+name: promote
+on:
+  push:
+    tags:
+    - v*.*.*
+
+jobs:
+  promote:
+    uses: CloudNativeEntrepreneur/actions/.github/workflows/gitops-promote.yaml
+    secrets: inherit
+    with:
+      environment_repository: CloudNativeEntrepreneur/example-prod-env
