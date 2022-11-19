@@ -10,4 +10,4 @@ jobs:
     secrets: inherit
     with:
       environment_repository: CloudNativeEntrepreneur/example-prod-env
-      pull_request: true
+      pull_request: false
