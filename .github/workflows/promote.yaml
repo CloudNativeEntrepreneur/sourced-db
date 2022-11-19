@@ -6,7 +6,7 @@ on:
 
 jobs:
   promote:
-    uses: CloudNativeEntrepreneur/actions/.github/workflows/gitops-promote.yaml@main
+    uses: CloudNativeEntrepreneur/actions/.github/workflows/gitops-promote-version-bump.yaml@main
     secrets: inherit
     with:
       environment_repository: CloudNativeEntrepreneur/example-prod-env
