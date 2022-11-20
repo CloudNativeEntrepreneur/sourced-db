@@ -11,7 +11,7 @@ jobs:
     with:
       environment_repository: CloudNativeEntrepreneur/example-local-env
       project: example-local-env
-      pull_request: true
+      pull_request: false
       name: example-sourced-db
 
   promote-prod:
