@@ -12,3 +12,4 @@ jobs:
       environment_repository: CloudNativeEntrepreneur/example-prod-env
       project: example-prod-env
       pull_request: true
+      name: example-sourced-db
