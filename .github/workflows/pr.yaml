@@ -43,7 +43,7 @@ jobs:
         You can view the Preview contents with `kubectl`:
 
         ```bash
-        kubectl get ns ${{ github.event.repository.name }}-pr-${{ github.event.pull_request.number }}-preview
-        kubectl get sa -n ${{ github.event.repository.name }}-pr-${{ github.event.pull_request.number }}-preview
-        kubectl get externalsecret -n ${{ github.event.repository.name }}-pr-${{ github.event.pull_request.number }}-preview
+        kubectl get postgresqls -n ${{ github.event.repository.name }}-pr-${{ github.event.pull_request.number }}-preview
+        kubectl get databases.databases.schemahero.io -n ${{ github.event.repository.name }}-pr-${{ github.event.pull_request.number }}-preview
+        kubectl get tables.schemas.schemahero.io -n ${{ github.event.repository.name }}-pr-${{ github.event.pull_request.number }}-preview
         ```
