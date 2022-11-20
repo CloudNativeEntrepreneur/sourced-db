@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{ .Values.name }}-{{ .Values.pr }}-preview-app
+  name: {{ .Values.name }}-{{ .Values.pr }}-preview-environment
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: {{ .Values.project }}
+  project: example-preview-envs
   source:
     path: helm
-    repoURL: https://github.com/{{ .Values.repository }}.git
-    targetRevision: {{ .Values.headRef }}
+    repoURL: https://github.com/cloudnativeentrepreneur/environment.git
+    targetRevision: v0.4.0
     helm:
       version: v3
   destination:
@@ -20,5 +20,3 @@ spec:
     automated:
       selfHeal: true
       prune: true
-    syncOptions:
-      - CreateNamespace=true
