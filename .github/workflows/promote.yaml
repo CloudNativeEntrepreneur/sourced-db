@@ -5,7 +5,16 @@ on:
     - v*.*.*
 
 jobs:
-  promote:
+  promote-local:
+    uses: CloudNativeEntrepreneur/actions/.github/workflows/gitops-promote-helm.yaml@main
+    secrets: inherit
+    with:
+      environment_repository: CloudNativeEntrepreneur/example-local-envs
+      project: example-local-envs
+      pull_request: true
+      name: example-sourced-db
+
+  promote-prod:
     uses: CloudNativeEntrepreneur/actions/.github/workflows/gitops-promote-helm.yaml@main
     secrets: inherit
     with:
