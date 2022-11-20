@@ -35,6 +35,7 @@ jobs:
     secrets: inherit
     with:
       environment_repository: CloudNativeEntrepreneur/example-preview-envs
+      project: example-preview-envs
       comment: |
         Your preview environment has been published! :rocket:
 
