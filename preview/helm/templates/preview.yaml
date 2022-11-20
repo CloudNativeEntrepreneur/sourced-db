@@ -9,7 +9,7 @@ spec:
   project: example-preview-envs
   source:
     path: helm
-    repoURL: https://github.com/cloudnativeentrepreneur/sourced-db.git
+    repoURL: https://github.com/{{ .Values.repository }}.git
     targetRevision: {{ .Values.headRef }}
     helm:
       version: v3

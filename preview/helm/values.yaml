@@ -1,4 +1,5 @@
-name: change-me
+name: sourced-db
 pr: pr-0
 headRef: HEAD
 tag: latest
+repository: CloudNativeEntrepreneur/sourced-db
