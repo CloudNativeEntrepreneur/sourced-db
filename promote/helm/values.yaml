@@ -1,0 +1,4 @@
+name: sourced-db
+version: HEAD
+project: dev
+repository: CloudNativeEntrepreneur/sourced-db
